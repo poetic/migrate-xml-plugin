@@ -74,7 +74,7 @@ Sometimes XML has different attributes with the same elements (see images in the
 
 * In this case, we need to update the configuration file on source: attribute.
 
-  ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/attribute%20example.png?token=AL2ATK4u3ZtRH8bModnBQj7Kt9s6sNufks5XQ5ELwA%3D%3D "")
+  ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/attribute%20example.png?token=AL2ATIeaVjc4tnYBH2zj0ApnLyMMStLzks5XQ5WdwA%3D%3D "")
 
   - Refer to the 1 above.  The key doesn't matter here as long as it is not a duplicate.
   - Refer to the 2 above.  The value 2 is the original source element name of the value we want to migrate.  
@@ -86,7 +86,7 @@ Sometimes XML has different attributes with the same elements (see images in the
 
 If you followed these steps, your configuration form should look like this:
 
-![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss3.png?token=AL2ATLkOD38YIFN0fGEdYCwVJ7jrRuawks5XQ5D4wA%3D%3D "")
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss3.png?token=AL2ATNYq_ZuVofowJJc2NMLDzvDX92BHks5XQ5VlwA%3D%3D "")
 
 
 ##Import with Migration
