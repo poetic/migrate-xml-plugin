@@ -8,8 +8,8 @@ source:
   base_query: //node
   migration_name: superheros
   attributes:
-    images hero: Image|ImageType="Hero"|imageHero
-    images human: Image|ImageType="Human"|imageHuman
+    images hero: images|ImageType="Hero"|imageHero
+    images human: images|ImageType="Human"|imageHuman
   xpath: 
     title: title
     author: author
