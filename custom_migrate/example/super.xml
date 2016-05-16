@@ -1,0 +1,67 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<top>
+<nodes>
+	<node>
+		<title>Batman</title>
+		<author>DC</author>
+		<attribute>
+			<power>brains</power>
+			<gender>male</gender>
+			<other>
+				<sidekick>robin</sidekick>
+				<power>brains</power>
+			</other>
+<images ImageType="Elevation">http://webservice.piblogin.com/resources/plans/elevations/websize/T910 - W_A.jpg</images>
+<images ImageType="Floorplan">http://webservice.piblogin.com/resources/plans/elevations/websize/13046_A.jpg</images>
+		</attribute>
+		<pets>horse</pets>
+		<pets>cats</pets>
+		<realname>Bruce Wayne</realname>
+		<realname>Logan</realname>
+	</node>
+	<node>
+		<title>Superman</title>
+		<author>SUK</author>
+		<attribute>
+			<power>super strength</power>
+			<gender>male</gender>
+			<other>
+				<sidekick>supergirl</sidekick>
+			</other>
+<images ImageType="Elevation">http://webservice.piblogin.com/resources/plans/elevations/websize/13046_A.jpg</images>
+		</attribute>
+		<pets>dogs</pets>
+		<pets>cats</pets>
+		<realname>Clark Kent</realname>
+	</node>
+	<node>
+		<title>Wolverine</title>
+		<author>Marvel</author>
+		<attribute>
+			<power>healing</power>
+			<gender>male</gender>
+			<other>
+				<sidekick>Deadpool</sidekick>
+			</other>
+		</attribute>
+		<pets>dogs</pets>
+		<pets>cats</pets>
+		<pets>horse</pets>
+		<pets>pigs</pets>
+		<realname>Logan</realname>
+	</node>
+	<node>
+		<title>Captain America</title>
+		<author>Marvel</author>
+		<attribute>
+			<power>super strength</power>
+			<gender>male</gender>
+			<other>
+				<sidekick>bucky</sidekick>
+			</other>
+		</attribute>
+		<pets>pigs</pets>
+		<realname>Steven Rogers</realname>
+	</node>
+</nodes>
+</top>

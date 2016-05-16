@@ -3,10 +3,10 @@ migration_tags: null
 migration_group: null
 label:
 source:
+  migration_name:
   plugin:
   path:
   base_query:
-  migration_name:
   attributes:
 
   xpath:
