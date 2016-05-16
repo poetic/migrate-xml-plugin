@@ -11,13 +11,13 @@ This module uses xml_plugin as the source.
 ##Process Plugin
 This module has three process plugins
 1. Image Process Plugin
-   *This plugin is used to insert images through the source URL value from the XML
+   * This plugin is used to insert images through the source URL value from the XML
 
 2. Taxonomy Process Plugin
-   *This plugin is used to insert taxonomy entity references 
+   * This plugin is used to insert taxonomy entity references 
 
 3. Entity Reference Process Plugin
-   *This plugin is used to insert content type entity references
+   * This plugin is used to insert content type entity references
 
 ##Configuration Form
 Drupal 8 migration utilizes the yml file as the configuration file to process migration.  The only file that needs to be adjusted is the configuration file.  Configuration files can be uploaded on Drupal admin page.
