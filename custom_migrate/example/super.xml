@@ -11,7 +11,7 @@
 				<sidekick>robin</sidekick>
 				<power>money</power>
 			</other>
-			<images ImageType="Hero">https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/batman.jpg?token=AL2ATHWO95KSKnHmqOAezB2OtAqlzJrhks5XQ21MwA%3D%3D/<images>
+			<images ImageType="Hero">https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/batman.jpg?token=AL2ATHWO95KSKnHmqOAezB2OtAqlzJrhks5XQ21MwA%3D%3D</images>
 			<images ImageType="Human">https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/bruce.jpg?token=AL2ATGjnwQ0lWO8xrfQxuflba4FGmaK0ks5XQ20TwA%3D%3D</images>
 		</attribute>
 		<pets>horse</pets>
