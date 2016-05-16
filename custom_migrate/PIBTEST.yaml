@@ -1,0 +1,25 @@
+id: 
+migration_tags: null
+migration_group: null
+label:
+source:
+  plugin:
+  path:
+  base_query:
+  migration_name:
+  attributes:
+
+  xpath:
+
+  keys:
+
+process:
+  type:
+    plugin: default_value
+    default_value: 
+
+destination:
+  plugin: 
+dependencies:
+  module:
+migration_dependencies: {  }

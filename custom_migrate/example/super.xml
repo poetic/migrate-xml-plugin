@@ -9,10 +9,10 @@
 			<gender>male</gender>
 			<other>
 				<sidekick>robin</sidekick>
-				<power>brains</power>
+				<power>money</power>
 			</other>
-<images ImageType="Elevation">http://webservice.piblogin.com/resources/plans/elevations/websize/T910 - W_A.jpg</images>
-<images ImageType="Floorplan">http://webservice.piblogin.com/resources/plans/elevations/websize/13046_A.jpg</images>
+<images ImageType="Hero">http://webservice.piblogin.com/resources/plans/elevations/websize/T910 - W_A.jpg</images>
+<images ImageType="Human">http://webservice.piblogin.com/resources/plans/elevations/websize/13046_A.jpg</images>
 		</attribute>
 		<pets>horse</pets>
 		<pets>cats</pets>
@@ -21,14 +21,14 @@
 	</node>
 	<node>
 		<title>Superman</title>
-		<author>SUK</author>
+		<author>DC</author>
 		<attribute>
 			<power>super strength</power>
 			<gender>male</gender>
 			<other>
 				<sidekick>supergirl</sidekick>
 			</other>
-<images ImageType="Elevation">http://webservice.piblogin.com/resources/plans/elevations/websize/13046_A.jpg</images>
+<images ImageType="Hero">http://webservice.piblogin.com/resources/plans/elevations/websize/13046_A.jpg</images>
 		</attribute>
 		<pets>dogs</pets>
 		<pets>cats</pets>
