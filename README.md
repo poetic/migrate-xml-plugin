@@ -33,17 +33,23 @@ Click on the Export tab to see previous migration configurations.  If you want t
 
 ##Basic XML Migration
 
+This is the example xml file we will use for this tutorial.  You can find this file in the example folder.
+
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/xml%20screenshot.png?token=AL2ATGQp37icmuY82zQwpx0jMBUXNfCsks5XQ3PGwA%3D%3D "")
+
 1. Start out with the empty configuration form:
 
    ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss21.png?token=AL2ATFyrF4G2ymE4R7eNuAIvuKwGf3okks5XQ2bEwA%3D%3D "")
 
 2. Create the name for this migration and place it in id and migration_name.  They need to IDENTICAL. We will use superhero for this example
 3. Lable is optional description.  We will use 'Import Superhero Content' for this example.
-4. Since we are using the XML Plugin for this migration, insert xml_plugin for source: plugin.
+4. source: plugin tells migration which source plugin this configuration will use.  Since we are using the XML Plugin for this  migration, insert xml_plugin for source: plugin.
 5. Insert the URL path for the XML file for source: path.  We will use this path for this example.
    https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATB5L8fKnAV_bluTexNyK_JvDUxg9ks5XQ2wlwA%3D%3D
-6. base_query is starting query point of the xpath for this migration.  We will use //node for this example.
+6. source: base_query is starting query point of the xpath for this migration.  We will use //node for this example.
 7. We will cover source: attribute in the later part of the tutorial
 8. source: xpath will be used to create a new array for the migration to read
-    
 
+   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/xpath%20example.png?token=AL2ATBjvrYhjUs7XaFe4hWgwuqGJBrXFks5XQ3PfwA%3D%3D "")
+    
+9. source: key 

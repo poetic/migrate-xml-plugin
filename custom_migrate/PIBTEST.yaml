@@ -1,17 +1,23 @@
-id: 
+id: superhero
 migration_tags: null
 migration_group: null
-label:
-source:
-  plugin:
-  path:
-  base_query:
-  migration_name:
+label: 'Import Superhero Content'
+source: 
+  plugin: xml_plugin
+  path: 'https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATB5L8fKnAV_bluTexNyK_JvDUxg9ks5XQ2wlwA%3D%3D'
+  base_query: //node
+  migration_name: superhero
   attributes:
 
-  xpath:
-
+  xpath: 
+    title: title
+    author: author
+    power: attribute.power
+    gender: attribute.gender
+    sidekick: attribute.other.sidekick
   keys:
+  - title
+  - author
 
 process:
   type:
