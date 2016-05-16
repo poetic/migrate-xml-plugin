@@ -1,15 +1,15 @@
-id: superhero
+id: superheros
 migration_tags: null
 migration_group: null
 label: 'Import Superhero Content'
 source: 
   plugin: xml_plugin
-  path: 'https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATB5L8fKnAV_bluTexNyK_JvDUxg9ks5XQ2wlwA%3D%3D'
+  path: 'https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATALsKurARWb8M6qD6puXu9Y9nIheks5XQ5NowA%3D%3D'
   base_query: //node
-  migration_name: superhero
+  migration_name: superheros
   attributes:
-    images elevation: Image|ImageType="Elevation"|imageElevation
-    images floorplan: Image|ImageType="FloorPlan"|imageFloorplan
+    images hero: Image|ImageType="Hero"|imageHero
+    images human: Image|ImageType="Human"|imageHuman
   xpath: 
     title: title
     author: author
@@ -18,8 +18,8 @@ source:
     sidekick: attribute.other.sidekick
     realname: realname
     pets: pets
-    imageElevation: attribute.imageElevation
-    imageFloorplan: attribute.imageFloorplan
+    imageHero: attribute.imageHero
+    imageHuman: attribute.imageHuman
   keys:
   - title
   - author
@@ -43,7 +43,11 @@ process:
     source_element: pets
   field_images: 
     plugin: image_plugin
-    source_element: attribute.imageElevation
+    source_element: attribute.imageHero
+  field_floorplan: 
+    plugin: image_plugin
+    #Insert the new element name 
+    source_element: attribute.imageHuman
 destination:
   plugin: entity:node
 dependencies:

@@ -26,7 +26,7 @@ This module has three process plugins:
 
 This is the example xml file we will use for this tutorial.  You can find this file in the example folder.
 
-![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/xml%20screenshot.png?token=AL2ATOa6YPGfoAk1-fwurZp0eKCET61Jks5XQ3_0wA%3D%3D "")
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATALsKurARWb8M6qD6puXu9Y9nIheks5XQ5NowA%3D%3D "")
 
 1. Start out with the empty configuration form:
 
