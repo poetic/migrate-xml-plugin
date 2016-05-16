@@ -46,7 +46,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
    * Refer to the 2 above.  The value is the xpath to the content we want to migrate.  Map out the xpath from the path from base_query above. Make sure to replace '/' with '.'.  This will be used as the NEW source element name.
      - attribute/other/sidekick as attribute.other.sidekick
    
-9. source: key is the unqie identifier attached to each migrated content.  Insert the NEW element source name here.  Each configuration is allowed to have up to two keys.  Keys cannot be changed when the configuration is updated.
+9. source: key is the unqie identifier attached to each migrated content.  Insert the NEW source element name here.  Each configuration is allowed to have up to two keys.  Keys cannot be changed when the configuration is updated.
 10. process: type: default_value is the drupal machine name of the entity the configuration is migrating to. Our content name for this is superhero.
 11. Under process, list out the fields that needs to be populated through migration. The key is the machine field name of the node and the value is the NEW element source name from the value we want to access.  Please refer to number 8 for the NEW element source names.
 12. destination: plugin configurs the entity type.  We will use entity:node for this exmaple since our entity is a node (content type).
@@ -54,6 +54,19 @@ This is the example xml file we will use for this tutorial.  You can find this f
 If you followed these steps, your configuration form should look like this:
 
 ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss1.png?token=AL2ATNZjwGKdfzdCva5hll57EL_MzMGvks5XQ3_RwA%3D%3D "")
+
+
+##Utilizing Process Plugins in Migration Configuration Form
+Process plugins are necessary when migration includes any entity references.  We will add two entity references to our configuration form: pets and realname. Both entity references will be added to xpah: just like any other fields.
+
+Under the process: the key will be the machine name just like the other fields.  Unlike other fields, the value will include other attributes, plugin, content_type, source_elements.
+  * For plugin, insert entity_reference_plugin if this is a entity reference for a content type and taxonomy_plugin if this is a taxonomy entity reference plugin.
+  * For content_type, insert the machine name of the destination
+  * For source_element, insert the NEW source element here
+
+If you followed these steps, your configuration form should look like this:
+
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss2.png?token=AL2ATGe_0OT-pmKQKzdhsf5yat9iX-_zks5XQ4n5wA%3D%3D "")
 
 ##Import with Migration
 The configuration files is ready be uploaded on Drupal admin page.
