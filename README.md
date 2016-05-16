@@ -35,11 +35,11 @@ Click on the Export tab to see previous migration configurations.  If you want t
 
 This is the example xml file we will use for this tutorial.  You can find this file in the example folder.
 
-![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/xml%20screenshot.png?token=AL2ATGQp37icmuY82zQwpx0jMBUXNfCsks5XQ3PGwA%3D%3D "")
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/xml%20screenshot.png?token=AL2ATOa6YPGfoAk1-fwurZp0eKCET61Jks5XQ3_0wA%3D%3D "")
 
 1. Start out with the empty configuration form:
 
-   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss21.png?token=AL2ATFyrF4G2ymE4R7eNuAIvuKwGf3okks5XQ2bEwA%3D%3D "")
+   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss1.png?token=AL2ATNZjwGKdfzdCva5hll57EL_MzMGvks5XQ3_RwA%3D%3D "")
 
 2. Create the name for this migration and place it in id and migration_name.  They need to IDENTICAL. We will use superhero for this example
 3. Lable is optional description.  We will use 'Import Superhero Content' for this example.
@@ -63,4 +63,4 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
 If you followed these steps, your configuration form should look like this:
 
-
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/xml%20screenshot.png?token=AL2ATGQp37icmuY82zQwpx0jMBUXNfCsks5XQ3PGwA%3D%3D "")
