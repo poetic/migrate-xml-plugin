@@ -22,10 +22,14 @@ source:
 process:
   type:
     plugin: default_value
-    default_value: 
-
+    default_value: superhero
+  title: title
+  field_author: author
+  field_power: attribute.power
+  field_gender: attribute.gender
+  field_sidekick: attribute.other.sidekick
 destination:
-  plugin: 
+  plugin: entity:node
 dependencies:
   module:
 migration_dependencies: {  }

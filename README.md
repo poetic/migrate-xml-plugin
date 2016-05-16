@@ -1,5 +1,5 @@
 # Migrate XML Plugin
-This is a XML Plugin custom module for Drupal 8 Migration.  
+This is a XML Plugin custom module for Drupal 8 Migration.  Drupal 8 migration utilizes the yml file as the configuration file to process migration.  The only file that needs to be adjusted is the configuration file.  
 
 ## Drupal Module Dependencies
 Migrate core
@@ -19,19 +19,9 @@ This module has three process plugins
 3. Entity Reference Process Plugin
    * This plugin is used to insert content type entity references
 
-##Configuration Form
-Drupal 8 migration utilizes the yml file as the configuration file to process migration.  The only file that needs to be adjusted is the configuration file.  Configuration files can be uploaded on Drupal admin page.
+#How to Migrate Using Migrate XML Plugin
 
-1. Configuration/Configuration synchronization/Import tab
-2. Choose single item
-3. Select Migration
-4. Paste in the configuration file
-
-Click on the Export tab to see previous migration configurations.  If you want to override previous configuration, get the uuid from the previous configuration accessed through export tab and include the uuid with the updated configuration file and import it again.
-
-#How to Create the Migration Configuration Form
-
-##Basic XML Migration
+##Create Basic Migration Configuration Form
 
 This is the example xml file we will use for this tutorial.  You can find this file in the example folder.
 
@@ -64,3 +54,25 @@ This is the example xml file we will use for this tutorial.  You can find this f
 If you followed these steps, your configuration form should look like this:
 
 ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss1.png?token=AL2ATNZjwGKdfzdCva5hll57EL_MzMGvks5XQ3_RwA%3D%3D "")
+
+##Import with Migration
+The configuration files is ready be uploaded on Drupal admin page.
+
+1. Configuration/Configuration synchronization/Import tab
+2. Choose single item
+3. Select Migration
+4. Paste in the configuration file
+
+Click on the Export tab to see previous migration configurations.  If you want to override previous configuration, get the uuid from the previous configuration accessed through export tab and include the uuid with the updated configuration file and import it again.
+
+In nebual root level:
+
+* run vagrant ssh
+* run cd /var/www/drupal/web
+* run migration commands
+  - drush cc (clear cache)
+  - drush mi migration_id (import)
+  - drush mr migration_id (rollback)
+  - drush mrs migration_id (reset)
+  - drush mi migration_id --update (update)
+  - drush mus migration_id (this will unpublish any content missing from XML migrated with this id and publish any unpublished content that is present in XML)
