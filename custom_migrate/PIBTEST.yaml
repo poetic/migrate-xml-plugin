@@ -1,0 +1,43 @@
+uuid: 27d379a7-288d-49bf-a9e4-7eb4b77eceec
+langcode: en
+status: true
+dependencies:
+  module: null
+id: pib0
+migration_tags: null
+migration_group: null
+label: 'Import PIB'
+source:
+  plugin: xml_plugin
+  path: 'http://service.piblogin.com/pib_data_xml.ashx'
+  base_query: //Plan
+  migration_name: pib0
+  attributes:
+    images elevation: Image|ImageType="Elevation"|imageElevation
+    images floorplan: Image|ImageType="FloorPlan"|imageFloorplan
+  xpath:
+    PlanNumber: PlanNumber|PlanNumber
+    Bedrooms: Bedrooms|Bedrooms
+    SqFt: SqFt|SqFt
+    Baths: Baths|Baths
+    imageElevation: images.imageElevation|Images/imageElevation
+    imageFloorplan: images.imageFloorplan|Images/imageFloorplan
+  keys:
+    - PlanNumber
+process:
+  type:
+    plugin: default_value
+    default_value: plan
+  title: PlanNumber
+  field_bedrooms: Bedrooms
+  field_full_baths: Baths
+  field_sqft: SqFt
+  field_elevation:
+    plugin: image_plugin
+    source_element: images.imageElevation
+  field_floorplan:
+    plugin: image_plugin
+    source_element: images.imageFloorplan
+destination:
+  plugin: 'entity:node'
+migration_dependencies: {  }
