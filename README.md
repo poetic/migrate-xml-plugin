@@ -37,7 +37,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 5. Insert the URL path for the XML file for source: path.  We will use this path for this example.
    https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATB5L8fKnAV_bluTexNyK_JvDUxg9ks5XQ2wlwA%3D%3D
 6. source: base_query is starting query point of the xpath for this migration.  We will use //node for this example.
-7. We will cover source: attribute in the later part of the tutorial
+7. We will cover source: attribute in the later part of the tutorial (see If you need to target attributes in the XML file below)
 8. source: xpath will be used to create a new array for the migration to read
 
    ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/xpath%20screenshot.png?token=AL2ATDMwCixL2gsepmc7E-5Qhue3Lj61ks5XQ4BIwA%3D%3D "")
@@ -67,6 +67,26 @@ Under the process: the key will be the machine name just like the other fields. 
 If you followed these steps, your configuration form should look like this:
 
 ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss2.png?token=AL2ATGe_0OT-pmKQKzdhsf5yat9iX-_zks5XQ4n5wA%3D%3D "")
+
+##If you need to target attributes in the XML file
+Sometimes XML has different attributes with the same elements (see images in teh example XML above).  
+
+* In this case, we need to update the configuration file on source: attribute.
+
+  ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss2.png?token=AL2ATGe_0OT-pmKQKzdhsf5yat9iX-_zks5XQ4n5wA%3D%3D "")
+
+  - Refer to the 1 above.  The key doesn't matter here as long as it is not a duplicate.
+  - Refer to the 2 above.  The value 2 is the original source element name of the value we want to migrate.  
+  - Refer to the 3 above.  The value 3 is the exact copy of the attribue from the source xml file. Make sure it is exactly the same.
+  - Refer to the 4 above.  The value 4 is the replacement of original source element name.  This will be used as the original source name.
+
+* Go to step 8 from Create Basic Migration Configuration Form above and insert under source: xpath.
+* If this was a regular field, it would follow the step 8 from Create Basic Migration Configuration Form above.  Since this is another entity reference (image), we need to use image_plugin.  
+
+If you followed these steps, your configuration form should look like this:
+
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss2.png?token=AL2ATGe_0OT-pmKQKzdhsf5yat9iX-_zks5XQ4n5wA%3D%3D "")
+
 
 ##Import with Migration
 The configuration files is ready be uploaded on Drupal admin page.
