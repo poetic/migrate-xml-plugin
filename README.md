@@ -39,7 +39,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
 1. Start out with the empty configuration form:
 
-   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss1.png?token=AL2ATNZjwGKdfzdCva5hll57EL_MzMGvks5XQ3_RwA%3D%3D "")
+   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss21.png?token=AL2ATFyrF4G2ymE4R7eNuAIvuKwGf3okks5XQ2bEwA%3D%3D "")
 
 2. Create the name for this migration and place it in id and migration_name.  They need to IDENTICAL. We will use superhero for this example
 3. Lable is optional description.  We will use 'Import Superhero Content' for this example.
@@ -50,7 +50,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 7. We will cover source: attribute in the later part of the tutorial
 8. source: xpath will be used to create a new array for the migration to read
 
-   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss21.png?token=AL2ATFyrF4G2ymE4R7eNuAIvuKwGf3okks5XQ2bEwA%3D%3D "")
+   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/xpath%20screenshot.png?token=AL2ATDMwCixL2gsepmc7E-5Qhue3Lj61ks5XQ4BIwA%3D%3D "")
 
    * Refer to the 1 above.  The key is the original source element name of the value we want to migrate.  
    * Refer to the 2 above.  The value is the xpath to the content we want to migrate.  Map out the xpath from the path from base_query above. Make sure to replace '/' with '.'.  This will be used as the NEW source element name.
@@ -63,4 +63,4 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
 If you followed these steps, your configuration form should look like this:
 
-![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/xml%20screenshot.png?token=AL2ATGQp37icmuY82zQwpx0jMBUXNfCsks5XQ3PGwA%3D%3D "")
+![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss1.png?token=AL2ATNZjwGKdfzdCva5hll57EL_MzMGvks5XQ3_RwA%3D%3D "")
