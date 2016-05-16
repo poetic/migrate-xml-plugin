@@ -10,6 +10,7 @@ This module uses xml_plugin as the source.
 
 ##Process Plugin
 This module has three process plugins
+
 1. Image Process Plugin
    * This plugin is used to insert images through the source URL value from the XML
 
@@ -69,7 +70,7 @@ If you followed these steps, your configuration form should look like this:
 ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss2.png?token=AL2ATGe_0OT-pmKQKzdhsf5yat9iX-_zks5XQ4n5wA%3D%3D "")
 
 ##If you need to target attributes in the XML file
-Sometimes XML has different attributes with the same elements (see images in teh example XML above).  
+Sometimes XML has different attributes with the same elements (see images in the example XML above).  
 
 * In this case, we need to update the configuration file on source: attribute.
 
@@ -81,7 +82,7 @@ Sometimes XML has different attributes with the same elements (see images in teh
   - Refer to the 4 above.  The value 4 is the replacement of original source element name.  This will be used as the original source name.
 
 * Go to step 8 from Create Basic Migration Configuration Form above and insert under source: xpath.
-* If this was a regular field, it would follow the step 8 from Create Basic Migration Configuration Form above.  Since this is another entity reference (image), we need to use image_plugin.  
+* If this was a regular field, it would follow the step 9 from Create Basic Migration Configuration Form above.  Since this is another entity reference (image), we need to use image_plugin.  
 
 If you followed these steps, your configuration form should look like this:
 
