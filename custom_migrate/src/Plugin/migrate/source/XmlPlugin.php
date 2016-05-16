@@ -45,20 +45,15 @@ class XmlPlugin extends SourcePluginBase {
     $configuration_array = $configuration->toArray();
 	  $xpath_map = $configuration_array['source']['xpath'];
 
-	  $xpath_map_values = array_values($xpath_map);
-	  $xpath_map_keys = array_keys($xpath_map);
-
 	  $new_node = '<root>';
 	  foreach($nodes as $node) {
 	  	$new_node .= '<node>';
-	  	foreach($xpath_map_values as $xpath_map_value){
-	  		$items_array = explode('|',$xpath_map_value);
-	  		$xpath = $items_array[1];
-	  		$element_name = $items_array[0];
+	  	foreach($xpath_map as $key=>$new_element_name){
+	  		$xpath = str_replace('.','/',$new_element_name);
 	  		$items = $node->xpath($xpath);
 	  		$single_item = '';
 	  		foreach($items as $item){
-		  		$single_item .= str_replace($xpath_map_keys, $element_name, $item->asXML());
+		  		$single_item .= str_replace($key, $new_element_name, $item->asXML());
 		  	}
 		  	$new_node .= $single_item;
   		}
