@@ -9,7 +9,7 @@ Migrate Tools: https://www.drupal.org/project/migrate_tools
 This module uses xml_plugin as the source.  
 
 ##Process Plugin
-This module has three process plugins
+This module has three process plugins:
 
 1. Image Process Plugin
    * This plugin is used to insert images through the source URL value from the XML
