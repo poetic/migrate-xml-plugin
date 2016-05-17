@@ -32,9 +32,12 @@ class XmlPlugin extends SourcePluginBase {
 
 	  //convert to XML to find and replace the elements with the attributes
 	  $toXML = $sxe->asXML();
+	  //converts all tags lowercase
+	 	$toXML = preg_replace_callback("/(<\/?[^!][^>]+)/", function ($matches) {return strtolower($matches[1]);}, $toXML);
 	  $attributes = $configuration_array['source']['attributes'];
 	  if(!$attributes == NULL){
 	  	foreach($attributes as $attribute){
+	  		$attribute = strtolower($attribute);
 		  	$attribute_each = explode('|', $attribute);
 				$toXML = preg_replace('/<' . $attribute_each[0] .' ' . $attribute_each[1] . '>(.*?)<\/' . $attribute_each[0] . '>/', '<' . $attribute_each[2] . '>$1</' . $attribute_each[2] . '>', $toXML);
 			}
@@ -44,15 +47,20 @@ class XmlPlugin extends SourcePluginBase {
 	  $configuration = entity_load('migration', $this->configuration['migration_name']);
     $configuration_array = $configuration->toArray();
 	  $xpath_map = $configuration_array['source']['xpath'];
+	  // $xpath_map_values = array_values($xpath_map);
+	  // $xpath_map_keys = array_keys($xpath_map);
 
 	  $new_node = '<root>';
 	  foreach($nodes as $node) {
 	  	$new_node .= '<node>';
 	  	foreach($xpath_map as $key=>$new_element_name){
+	  		// $items_array = explode('|',$xpath_map_value);
+	  		$new_element_name = strtolower($new_element_name);
 	  		$xpath = str_replace('.','/',$new_element_name);
 	  		$items = $node->xpath($xpath);
 	  		$single_item = '';
 	  		foreach($items as $item){
+	  			$key = strtolower($key);
 		  		$single_item .= str_replace($key, $new_element_name, $item->asXML());
 		  	}
 		  	$new_node .= $single_item;
@@ -61,6 +69,7 @@ class XmlPlugin extends SourcePluginBase {
 	  	$xml .= $node->asXML();
 	  }
 	  $new_node .= '</root>';
+
 	  $final = new XMLObject($new_node);
 	  return $final;
 	}
