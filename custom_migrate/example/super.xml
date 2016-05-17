@@ -8,7 +8,7 @@
 			<power>brains</power>
 			<gender>male</gender>
 			<Other>
-				<sideKick>robin</sidekick>
+				<sideKick>robin</sideKick>
 				<power>money</power>
 			</Other>
 			<images ImageType="Hero">https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/batman.jpg?token=AL2ATHWO95KSKnHmqOAezB2OtAqlzJrhks5XQ21MwA%3D%3D</images>
