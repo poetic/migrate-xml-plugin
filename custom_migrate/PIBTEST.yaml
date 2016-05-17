@@ -4,7 +4,7 @@ migration_group: null
 label: 'Import Superhero Content'
 source: 
   plugin: xml_plugin
-  path: 'https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATE_We1V25k_KNgFLumjYTMX5bOgyks5XRIqwwA%3D%3D'
+  path: 'https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATA9KQOF0YzDFgMj5jsJz7k0Zxkrvks5XRIs1wA%3D%3D'
   base_query: //node
   migration_name: superheros
   attributes:
