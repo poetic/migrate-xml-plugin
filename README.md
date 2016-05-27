@@ -1,12 +1,12 @@
 # Migrate XML Plugin
-This is a XML Plugin custom module for Drupal 8 Migration.  Drupal 8 migration utilizes the yml file as the configuration file to process migration.  The only file that needs to be adjusted is the configuration file.  
+This is a XML Plugin custom module for Drupal 8 Migration.  Drupal 8 migration utilizes the yml file as the configuration file to process migration.  The only file that needs to be adjusted is the configuration file.
 
 ## Drupal Module Dependencies
 Migrate core
 Migrate Tools: https://www.drupal.org/project/migrate_tools
 
 ##Source Plugin
-This module uses xml_plugin as the source.  
+This module uses xml_plugin as the source.
 
 ##Process Plugin
 This module has three process plugins:
@@ -15,7 +15,7 @@ This module has three process plugins:
    * This plugin is used to insert images through the source URL value from the XML
 
 2. Taxonomy Process Plugin
-   * This plugin is used to insert taxonomy entity references 
+   * This plugin is used to insert taxonomy entity references
 
 3. Entity Reference Process Plugin
    * This plugin is used to insert content type entity references
@@ -33,7 +33,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
    ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss21.png?token=AL2ATFyrF4G2ymE4R7eNuAIvuKwGf3okks5XQ2bEwA%3D%3D "")
 
 2. Create the name for this migration and place it in id and migration_name.  They need to IDENTICAL. We will use superhero for this example
-3. Lable is optional description.  We will use 'Import Superhero Content' for this example.
+3. Label is optional description.  We will use 'Import Superhero Content' for this example.
 4. source: plugin tells migration which source plugin this configuration will use.  Since we are using the XML Plugin for this  migration, insert xml_plugin for source: plugin.
 5. Insert the URL path for the XML file for source: path.  We will use this path for this example.
    https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATB5L8fKnAV_bluTexNyK_JvDUxg9ks5XQ2wlwA%3D%3D
@@ -43,14 +43,14 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
    ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/xpath%20screenshot.png?token=AL2ATDMwCixL2gsepmc7E-5Qhue3Lj61ks5XQ4BIwA%3D%3D "")
 
-   * Refer to the 1 above.  The key is the original source element name of the value we want to migrate.  
+   * Refer to the 1 above.  The key is the original source element name of the value we want to migrate.
    * Refer to the 2 above.  The value is the xpath to the content we want to migrate.  Map out the xpath from the path from base_query above. Make sure to replace '/' with '.'.  This will be used as the NEW source element name.
      - attribute/other/sidekick as attribute.other.sidekick
-   
-9. source: key is the unqie identifier attached to each migrated content.  Insert the NEW source element name here.  Each configuration is allowed to have up to two keys.  Keys cannot be changed when the configuration is updated.
+
+9. source: key is the unique identifier attached to each migrated content.  Insert the NEW source element name here.  Each configuration is allowed to have up to two keys.  Keys cannot be changed when the configuration is updated.
 10. process: type: default_value is the drupal machine name of the entity the configuration is migrating to. Our content name for this is superhero.
-11. Under process, list out the fields that needs to be populated through migration. The key is the machine field name of the node and the value is the NEW element source name from the value we want to access.  Please refer to number 8 for the NEW element source names.
-12. destination: plugin configurs the entity type.  We will use entity:node for this exmaple since our entity is a node (content type).
+11. Under process, list out the fields that needs to be populated through migration. The key is the machine field name of the node and the value is the NEW element source name from the value we want to access.  Please refer to number 8 for the NEW element source names. *MAKE SURE THEY ARE ALL LOWERCASE!!!!! ********
+12. destination: plugin configures the entity type.  We will use entity:node for this example since our entity is a node (content type).
 
 If you followed these steps, your configuration form should look like this:
 
@@ -70,19 +70,19 @@ If you followed these steps, your configuration form should look like this:
 ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss2.png?token=AL2ATGe_0OT-pmKQKzdhsf5yat9iX-_zks5XQ4n5wA%3D%3D "")
 
 ##If you need to target attributes in the XML file
-Sometimes XML has different attributes with the same elements (see images in the example XML above).  
+Sometimes XML has different attributes with the same elements (see images in the example XML above).
 
 * In this case, we need to update the configuration file on source: attribute.
 
   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/attribute%20example.png?token=AL2ATNnIY1uNEs8VVkjFKD4KuJRPHPBHks5XQ5biwA%3D%3D "")
 
   - Refer to the 1 above.  The key doesn't matter here as long as it is not a duplicate.
-  - Refer to the 2 above.  The value 2 is the original source element name of the value we want to migrate.  
+  - Refer to the 2 above.  The value 2 is the original source element name of the value we want to migrate.
   - Refer to the 3 above.  The value 3 is the exact copy of the attribue from the source xml file. Make sure it is exactly the same.
   - Refer to the 4 above.  The value 4 is the replacement of original source element name.  This will be used as the original source name.
 
 * Go to step 8 from Create Basic Migration Configuration Form above and insert under source: xpath.
-* If this was a regular field, it would follow the step 9 from Create Basic Migration Configuration Form above.  Since this is another entity reference (image), we need to use image_plugin.  
+* If this was a regular field, it would follow the step 9 from Create Basic Migration Configuration Form above.  Since this is another entity reference (image), we need to use image_plugin.
 
 If you followed these steps, your configuration form should look like this:
 
