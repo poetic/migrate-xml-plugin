@@ -30,7 +30,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
 1. Start out with the empty configuration form:
 
-   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss21.png?token=AL2ATFyrF4G2ymE4R7eNuAIvuKwGf3okks5XQ2bEwA%3D%3D "")
+   ![alt text](http://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/ss21.png)
 
 2. Create the name for this migration and place it in id and migration_name.  They need to IDENTICAL. We will use superhero for this example
 3. Label is optional description.  We will use 'Import Superhero Content' for this example.
@@ -41,7 +41,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 7. We will cover source: attribute in the later part of the tutorial (see If you need to target attributes in the XML file below)
 8. source: xpath will be used to create a new array for the migration to read
 
-   ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/xpath%20screenshot.png?token=AL2ATDMwCixL2gsepmc7E-5Qhue3Lj61ks5XQ4BIwA%3D%3D "")
+   ![alt text](http://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/xpath%20screenshot.png)
 
    * Refer to the 1 above.  The key is the original source element name of the value we want to migrate.
    * Refer to the 2 above.  The value is the xpath to the content we want to migrate.  Map out the xpath from the path from base_query above. Make sure to replace '/' with '.'.  This will be used as the NEW source element name.
@@ -54,7 +54,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
 If you followed these steps, your configuration form should look like this:
 
-![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss1.png?token=AL2ATNZjwGKdfzdCva5hll57EL_MzMGvks5XQ3_RwA%3D%3D "")
+![alt text](http://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/ss1.png)
 
 
 ##Utilizing Process Plugins in Migration Configuration Form
@@ -74,7 +74,7 @@ Sometimes XML has different attributes with the same elements (see images in the
 
 * In this case, we need to update the configuration file on source: attribute.
 
-  ![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/attribute%20example.png?token=AL2ATNnIY1uNEs8VVkjFKD4KuJRPHPBHks5XQ5biwA%3D%3D "")
+  ![alt text](http://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/attribute%20example.png)
 
   - Refer to the 1 above.  The key doesn't matter here as long as it is not a duplicate.
   - Refer to the 2 above.  The value 2 is the original source element name of the value we want to migrate.
@@ -86,8 +86,7 @@ Sometimes XML has different attributes with the same elements (see images in the
 
 If you followed these steps, your configuration form should look like this:
 
-![alt text](https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/README%20Screenshots/ss3.png?token=AL2ATPc-WPSx0a1pqxebA4PGZPDCbfVOks5XQ5bFwA%3D%3D "")
-
+![alt text](http://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/ss3.png)
 
 ##Import with Migration
 The configuration files is ready be uploaded on Drupal admin page.
