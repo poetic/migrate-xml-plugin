@@ -30,7 +30,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
 1. Start out with the empty configuration form:
 
-   ![alt text](http://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/ss21.png)
+   ![alt text](/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/ss21.png)
 
 2. Create the name for this migration and place it in id and migration_name.  They need to IDENTICAL. We will use superhero for this example
 3. Label is optional description.  We will use 'Import Superhero Content' for this example.
