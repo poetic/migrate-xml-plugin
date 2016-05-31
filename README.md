@@ -36,7 +36,8 @@ This is the example xml file we will use for this tutorial.  You can find this f
 3. Label is optional description.  We will use 'Import Superhero Content' for this example.
 4. source: plugin tells migration which source plugin this configuration will use.  Since we are using the XML Plugin for this  migration, insert xml_plugin for source: plugin.
 5. Insert the URL path for the XML file for source: path.  We will use this path for this example.
-   https://raw.githubusercontent.com/poetic/migrate-xml-plugin/development/custom_migrate/example/super.xml?token=AL2ATB5L8fKnAV_bluTexNyK_JvDUxg9ks5XQ2wlwA%3D%3D
+   https://github.com/poetic/migrate-xml-plugin/blob/development/custom_migrate/example/super.xml
+
 6. source: base_query is starting query point of the xpath for this migration.  We will use //node for this example.
 7. We will cover source: attribute in the later part of the tutorial (see If you need to target attributes in the XML file below)
 8. source: xpath will be used to create a new array for the migration to read
@@ -49,7 +50,7 @@ This is the example xml file we will use for this tutorial.  You can find this f
 
 9. source: key is the unique identifier attached to each migrated content.  Insert the NEW source element name here.  Each configuration is allowed to have up to two keys.  Keys cannot be changed when the configuration is updated. ***MAKE SURE THE KEYS ARE ALL LOWERCASE***
 10. process: type: default_value is the drupal machine name of the entity the configuration is migrating to. Our content name for this is superhero.
-11. Under process, list out the fields that needs to be populated through migration. The key is the machine field name of the node and the value is the NEW element source name from the value we want to access.  Please refer to number 8 for the NEW element source names. ***MAKE SURE THEY ARE ALL LOWERCASE!!!!! ***
+11. Under process, list out the fields that needs to be populated through migration. The key is the machine field name of the node and the value is the NEW element source name from the value we want to access.  Please refer to number 8 for the NEW element source names. ***MAKE SURE THEY ARE ALL LOWERCASE!!!!!***
 12. destination: plugin configures the entity type.  We will use entity:node for this example since our entity is a node (content type).
 
 If you followed these steps, your configuration form should look like this:
