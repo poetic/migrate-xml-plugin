@@ -104,9 +104,19 @@ In nebual root level:
 * run vagrant ssh
 * run cd /var/www/drupal/web
 * run migration commands
-  - drush cc (clear cache)
+  - drush cache-rebuild (clear cache)
   - drush mi migration_id (import)
   - drush mr migration_id (rollback)
   - drush mrs migration_id (reset)
   - drush mi migration_id --update (update)
   - drush mus migration_id (this will unpublish any content missing from XML migrated with this id and publish any unpublished content that is present in XML)
+
+##Using Migration as Feeds
+1. Configuration/Configuration synchronization/Export tab
+2. Choose single item
+3. Select Migration
+4. Select the Migration configuration initially used
+5. Copy, make the changes(the xml source path, removing fields that do not need importing etc)
+6. Go back to Configuration/Configuration synchronization/Import tab
+7. Paste the new configuration
+8. ***Make sure to save a copy of the old configuration file***
