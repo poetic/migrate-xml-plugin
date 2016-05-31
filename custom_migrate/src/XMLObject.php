@@ -32,7 +32,6 @@ class XMLObject extends \SimpleXMLIterator {
 	      $result[$new_key] = $value;
 	    }
 	  }
-	  print_r($result);
 	  return $result;
 	}
 }
