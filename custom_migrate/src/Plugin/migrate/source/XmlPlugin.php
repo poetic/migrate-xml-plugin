@@ -43,7 +43,7 @@ class XmlPlugin extends SourcePluginBase {
 			}
 		}
 		$new_sxe = simplexml_load_string($toXML);
-	  $nodes = $new_sxe->xpath($this->configuration['base_query']);
+	  $nodes = $new_sxe->xpath(strtolower($this->configuration['base_query']));
 	  $configuration = entity_load('migration', $this->configuration['migration_name']);
     $configuration_array = $configuration->toArray();
 	  $xpath_map = $configuration_array['source']['xpath'];
@@ -55,13 +55,16 @@ class XmlPlugin extends SourcePluginBase {
 	  	$new_node .= '<node>';
 	  	foreach($xpath_map as $key=>$new_element_name){
 	  		// $items_array = explode('|',$xpath_map_value);
-	  		$new_element_name = strtolower($new_element_name);
-	  		$xpath = str_replace('.','/',$new_element_name);
+
+	  		$new_element_name_lower = strtolower($new_element_name);
+	  		
+	  		$xpath = str_replace('.','/',$new_element_name_lower);
 	  		$items = $node->xpath($xpath);
 	  		$single_item = '';
+
 	  		foreach($items as $item){
 	  			$key = strtolower($key);
-		  		$single_item .= str_replace($key, $new_element_name, $item->asXML());
+		  		$single_item .= str_replace($key, $new_element_name_lower, $item->asXML());
 		  	}
 		  	$new_node .= $single_item;
   		}
@@ -69,7 +72,6 @@ class XmlPlugin extends SourcePluginBase {
 	  	$xml .= $node->asXML();
 	  }
 	  $new_node .= '</root>';
-
 	  $final = new XMLObject($new_node);
 	  return $final;
 	}

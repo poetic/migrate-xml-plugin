@@ -34,12 +34,13 @@ class EntityReferencePlugin extends ProcessPluginBase{
         $configuration_array = $configuration->toArray();
         $content_type = $configuration_array['process'][$destination_property]['content_type'];
         $source_element = $configuration_array['process'][$destination_property]['source_element'];
+        $source_element_lower = strtolower($source_element);
 
         //creates an array with all element names from the configuration file.  The foreach below allows it to find the elemenents that start out with the name
         $content_type_source_array = array();
-        $search_length = strlen($source_element);
+        $search_length = strlen($source_element_lower);
         foreach ($row_array as $key => $value) {
-            if (substr($key, 0, $search_length) == $source_element) {
+            if (substr($key, 0, $search_length) == $source_element_lower) {
                 array_push($content_type_source_array, $value);
             }
         }

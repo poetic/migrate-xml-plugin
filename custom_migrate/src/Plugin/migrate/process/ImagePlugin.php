@@ -27,7 +27,7 @@ use Drupal\migrate\MigrateSkipProcessException;
 
 class ImagePlugin extends ProcessPluginBase{
 
-  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+  public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {    
 
     //grab the migration configuration and turn it into an array
     $row_array = $row->getSource();
@@ -58,7 +58,7 @@ class ImagePlugin extends ProcessPluginBase{
               // Skip this item if there's no URL.
               throw new MigrateSkipProcessException();
             }
-            $nodes = $file->id();
+            $nodes = $file->id(); 
             array_push($array_nid,$nodes);
         }
     }
