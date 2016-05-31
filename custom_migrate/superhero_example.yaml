@@ -43,11 +43,11 @@ process:
     source_element: pets
   field_images: 
     plugin: image_plugin
-    source_element: attribute.imageHero
+    source_element: attribute.imagehero
   field_floorplan: 
     plugin: image_plugin
     #Insert the new element name 
-    source_element: attribute.imageHuman
+    source_element: attribute.imagehuman
 destination:
   plugin: entity:node
 dependencies:
