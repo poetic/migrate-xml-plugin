@@ -87,7 +87,7 @@ Sometimes XML has different attributes with the same elements (see images in the
 
 If you followed these steps, your configuration form should look like this:
 
-![ss3](https://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/ss3.png)
+![ss3](https://github.com/poetic/migrate-xml-plugin/blob/development/README%20Screenshots/Screen%20Shot%202016-05-31%20at%2010.13.43%20AM.png)
 
 ##Import with Migration
 The configuration files is ready be uploaded on Drupal admin page.
